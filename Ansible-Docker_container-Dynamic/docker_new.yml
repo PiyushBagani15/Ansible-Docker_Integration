@@ -48,4 +48,4 @@
       path: ip.txt
       block: |
               [docker]
-              {{ result.container.NetworkSettings.IPAddress }} ansible_user=root ansible_password=piyushansible15 ansible_connection=ssh
+              {{ result.container.NetworkSettings.IPAddress }} ansible_user=root ansible_password=yourpassword ansible_connection=ssh
