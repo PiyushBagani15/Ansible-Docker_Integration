@@ -1,0 +1,17 @@
+- hosts: docker
+  tasks:
+  - name: "Installing package httpd"
+    package:
+        name: "httpd"
+        state: present
+
+  - name: "Creating webpage"
+    copy:
+        dest: "/var/www/html/index.html"
+        content: "Keep Hustling!!"
+
+  - name: "Starting services"
+    service:
+      name: " httpd"
+      state: started
+      enabled: yes
